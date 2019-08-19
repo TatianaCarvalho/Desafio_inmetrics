@@ -1,7 +1,5 @@
-Dado('que chamo serviço apifilms selecionando {string} e {string}') do |director, producer|
-    binding.pry
-    @body = Helpers::Payloads::Apifilmes_body.new.buscarfilmes_body(director, producer)
-    @response = Helpers::Requests::Apifilms.new.buscar_filmes(@body)
+Dado("que chamo serviço apifilms selecionando director e producer") do
+    @response = Apifilms.new.buscar_filmes
 end
                                                                                    
 Dado("tenho status {int}") do |status|
