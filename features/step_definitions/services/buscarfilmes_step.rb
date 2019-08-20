@@ -9,10 +9,12 @@ end
 
 Então("tenho uma lista de filmes personalisada por diretor e produtor") do
     @response['results'].each do |result|
-        puts result['title']
-        # print result['title']
-        # p result['title']
-        # p result['director']
-        # p result['producer']
+        director = result['director']
+        producer = result['producer']
+        if director == 'George Lucas' || producer == 'Rick McCallum'
+            puts ("Titulo: "+result['title'])
+            puts ("Diretor: "+result['director'])
+            puts ("Produtor: "+result['producer'])
+        end
     end
-end
+end    
