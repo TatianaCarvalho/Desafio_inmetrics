@@ -15,5 +15,6 @@ Quando("seleciono um produto e realizo uma compra") do
 end
   
 Então("tenho vejo mensagem") do
+    # find('div[class="cm-notification-container notification-container alert alert-success cm-auto-hide"]')
     expect(page).to have_content('NoticeWe have received your request! Our manager will contact you soon.')
 end

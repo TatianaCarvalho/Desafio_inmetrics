@@ -8,16 +8,17 @@ module PageObjects
             end
             def selecionar_produtos
                 find('input[id="elm_checkbox_31_10_92"]').click
-                find('img[id="det_img_244"]').click             
+                find('img[id="det_img_227"]').click             
             end
             
             def comprar_com_um_click
-                find('a[id="opener_call_request_244"]').click
+                find('a[id="opener_call_request_227"]', visible: :all).click
             end
 
             def preencher_formulario
-                find('input[id="call_data_call_request_244_name"]', visible: :all).click.set('Tati')
-                find('input[id="call_data_call_request_244_phone"]', visible: :all).click.set('11111111111')
+                find('input[id*=_name]', visible: :all).click.set Faker::FunnyName.name
+                find('input[id*=phone]', visible: :all).click.set Faker::PhoneNumber.subscriber_number(length: 14)
+                # find('input[id*=email]', visible: :all).click.set Faker::Internet.email
                 find('button[name="dispatch[call_requests.request]"]').click
             end
         end           
