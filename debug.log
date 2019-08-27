@@ -2,3 +2,4 @@
 [0821/131712.552:ERROR:exception_snapshot_win.cc(98)] thread ID 15468 not found in process
 [0821/131903.616:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso não lhe foi concedido. (0xc0000022)
 [0821/131903.623:ERROR:exception_snapshot_win.cc(98)] thread ID 24248 not found in process
+[0827/130441.140:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
